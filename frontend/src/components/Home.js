@@ -17,12 +17,18 @@ export class Home extends Component {
 	};
 	componentDidMount = () => {
 		const url = "https://joelwekesa.herokuapp.com/api/images/";
-		axios.get(url).then((res) => {
-			this.setState({
-				...this.state,
-				images: res.data,
+		axios
+			.get(url)
+			.then((res) => {
+				console.log(res.data);
+				this.setState({
+					...this.state,
+					images: res.data,
+				});
+			})
+			.catch((err) => {
+				console.log(err.message);
 			});
-		});
 	};
 
 	handleChange = (e) => {
