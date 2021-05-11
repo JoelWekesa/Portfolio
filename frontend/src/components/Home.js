@@ -175,11 +175,13 @@ export class Home extends Component {
 				<header id="header">
 					<div className="d-flex flex-column">
 						<div className="profile">
-							<img
-								src="https://joelwekesa.s3.eu-west-3.amazonaws.com/images/Joe_h6gafH9.jpg"
-								alt=""
-								className="img-fluid rounded-circle"
-							/>
+							{images.length > 0 ? (
+								<img
+									src={images[0].image}
+									alt=""
+									className="img-fluid rounded-circle"
+								/>
+							) : null}
 
 							<h1 className="text-light">
 								<a href="index.html">Joel Wekesa</a>
@@ -272,11 +274,13 @@ export class Home extends Component {
 
 							<div className="row">
 								<div className="col-lg-4" data-aos="fade-right">
-									<img
-										src="https://joelwekesa.s3.eu-west-3.amazonaws.com/images/Joe_h6gafH9.jpg"
-										className="img-fluid"
-										alt=""
-									/>
+									{images.length > 0 ? (
+										<img
+											src={images[0].image}
+											alt=""
+											className="img-fluid rounded-circle"
+										/>
+									) : null}
 								</div>
 								<div
 									className="col-lg-8 pt-4 pt-lg-0 content"
