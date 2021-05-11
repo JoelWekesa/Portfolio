@@ -16,7 +16,7 @@ export class Home extends Component {
 		missing: false,
 	};
 	componentDidMount = () => {
-		const url = "http://127.0.0.1:8000/api/images/";
+		const url = "https://joelwekesa.herokuapp.com/api/images/";
 		axios.get(url).then((res) => {
 			this.setState({
 				...this.state,
@@ -39,9 +39,9 @@ export class Home extends Component {
 			...this.state,
 			loading: true,
 		});
-		const { name, email, subject, message, loading, error } = this.state;
+		const { name, email, subject, message } = this.state;
 		const body = { name, email, subject, message };
-		const url = "http://127.0.0.1:8000/api/messages/";
+		const url = "https://joelwekesa.herokuapp.com/api/messages/";
 		axios
 			.post(url, body)
 			.then(() => {
