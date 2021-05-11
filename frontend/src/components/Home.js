@@ -6,6 +6,7 @@ import LinearProgress from "@material-ui/core/LinearProgress";
 export class Home extends Component {
 	state = {
 		images: [],
+		Joel: "",
 		show: false,
 		error: null,
 		name: "",
@@ -102,6 +103,7 @@ export class Home extends Component {
 	render() {
 		const {
 			images,
+			Joel,
 			show,
 			error,
 			name,
@@ -173,13 +175,11 @@ export class Home extends Component {
 				<header id="header">
 					<div className="d-flex flex-column">
 						<div className="profile">
-							{images.length > 0 ? (
-								<img
-									src={images[0].image}
-									alt=""
-									className="img-fluid rounded-circle"
-								/>
-							) : null}
+							<img
+								src="https://joelwekesa.s3.eu-west-3.amazonaws.com/images/Joe_h6gafH9.jpg"
+								alt=""
+								className="img-fluid rounded-circle"
+							/>
 
 							<h1 className="text-light">
 								<a href="index.html">Joel Wekesa</a>
@@ -272,9 +272,11 @@ export class Home extends Component {
 
 							<div className="row">
 								<div className="col-lg-4" data-aos="fade-right">
-									{images.length > 0 ? (
-										<img src={images[0].image} className="img-fluid" alt="" />
-									) : null}
+									<img
+										src="https://joelwekesa.s3.eu-west-3.amazonaws.com/images/Joe_h6gafH9.jpg"
+										className="img-fluid"
+										alt=""
+									/>
 								</div>
 								<div
 									className="col-lg-8 pt-4 pt-lg-0 content"
