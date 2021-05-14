@@ -190,20 +190,21 @@ export class Home extends Component {
 								<a href="tel:+254742649976" className="linkedin">
 									<i className="bi bi-phone"></i>
 								</a>
-								<a href="#" className="twitter">
+								<a href="https://twitter.com/its_joel1" className="twitter">
 									<i className="bx bxl-twitter"></i>
 								</a>
-								<a href="#" className="facebook">
+								<a
+									href="https://mobile.facebook.com/joel.wekesa.73"
+									className="facebook">
 									<i className="bx bxl-facebook"></i>
 								</a>
-								<a href="#" className="instagram">
+								<a
+									href="https://www.instagram.com/joelmunialo/"
+									className="instagram">
 									<i className="bx bxl-instagram"></i>
 								</a>
 								<a href="https://github.com/JoelWekesa" className="google-plus">
 									<i className="bx bxl-github"></i>
-								</a>
-								<a href="#" className="linkedin">
-									<i className="bx bxl-linkedin"></i>
 								</a>
 							</div>
 						</div>
@@ -531,11 +532,8 @@ export class Home extends Component {
 							<div className="section-title">
 								<h2>Resume</h2>
 								<p>
-									Magnam dolores commodi suscipit. Necessitatibus eius
-									consequatur ex aliquid fuga eum quidem. Sit sint consectetur
-									velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit
-									suscipit alias ea. Quia fugiat sit in iste officiis commodi
-									quidem hic quas.
+									Here's a summary of my educational background and budding
+									career.
 								</p>
 							</div>
 
@@ -778,7 +776,7 @@ export class Home extends Component {
 						</div>
 					</section>
 
-					<section id="testimonials" className="testimonials section-bg">
+					{/* <section id="testimonials" className="testimonials section-bg">
 						<div className="container">
 							<div className="section-title">
 								<h2>Testimonials</h2>
@@ -909,7 +907,7 @@ export class Home extends Component {
 								<div className="swiper-pagination"></div>
 							</div>
 						</div>
-					</section>
+					</section> */}
 
 					<section id="contact" className="contact">
 						<div className="container">
