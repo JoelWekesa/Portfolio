@@ -66,7 +66,7 @@ export class Home extends Component {
 						...this.state,
 						show: false,
 					});
-				}, 5000);
+				}, 15000);
 			})
 			.catch((err) => {
 				const { message } = err;
@@ -81,7 +81,7 @@ export class Home extends Component {
 						...this.state,
 						show: false,
 					});
-				}, 5000);
+				}, 15000);
 			});
 	};
 
