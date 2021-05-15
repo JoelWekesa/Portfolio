@@ -8,6 +8,6 @@ class ImagesViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = ImagesSerializer
 
 class MessagesViewSet(viewsets.ModelViewSet):
-    permission_classes = [BlockGetRequests, BlockGetRequestsIP]
+    permission_classes = [BlockGetRequestsIP]
     queryset = Messages.objects.all()
     serializer_class = MessagesSerializer
