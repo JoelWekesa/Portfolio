@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     #Local apps
     'frontend',
     'backend',
+    'users',
     #Imported apps
     'rest_framework',
     'storages',
