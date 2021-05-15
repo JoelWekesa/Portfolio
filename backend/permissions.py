@@ -7,7 +7,7 @@ class BlockGetRequests(permissions.BasePermission):
         if request.method == 'POST': # Returns True if POST request
             return True
         else:
-            raise AuthenticationFailed(f'{ip_addr}', 403)
+            raise AuthenticationFailed('You are not allowed to read my messages', 403)
 
 
 class BlockGetRequestsIP(permissions.BasePermission):
@@ -16,6 +16,8 @@ class BlockGetRequestsIP(permissions.BasePermission):
         if x_forwarded_for:
             ip = x_forwarded_for.split(',')[0]
             if ip == AllowedIP.objects.first():
+                return True
+            elif request.method == "POST":
                 return True
         else:
             raise AuthenticationFailed(f'{x_forwarded_for}', 403)
