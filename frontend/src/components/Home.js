@@ -100,6 +100,42 @@ export class Home extends Component {
 		});
 	};
 
+	doc = new jsPDF();
+
+	saveDiv = (divId, title) => {
+		doc.fromHTML(
+			`<html><head><title>${title}</title></head><body>` +
+				document.getElementById(divId).innerHTML +
+				`</body></html>`
+		);
+		doc.save("div.pdf");
+	};
+
+	printDiv = (divId, title) => {
+		let mywindow = window.open(
+			"",
+			"PRINT",
+			"height=650,width=900,top=100,left=150"
+		);
+
+		mywindow.document.write(`<html><head><title>${title}</title>`);
+		mywindow.document.write("</head><body >");
+		mywindow.document.write(document.getElementById(divId).innerHTML);
+		mywindow.document.write("</body></html>");
+
+		mywindow.document.close(); // necessary for IE >= 10
+		mywindow.focus(); // necessary for IE >= 10*/
+
+		mywindow.print();
+		mywindow.close();
+
+		return true;
+	};
+
+	handleDownload = () => {
+		this.printDiv("download", "Joel's Resume");
+	};
+
 	render() {
 		const {
 			images,
@@ -529,104 +565,116 @@ export class Home extends Component {
 
 					<section id="resume" className="resume">
 						<div className="container">
-							<div className="section-title">
-								<h2>Resume</h2>
-								<p>
-									Here's a summary of my educational background and budding
-									career.
-								</p>
+							<div id="download">
+								<div className="section-title">
+									<h2>Resume</h2>
+									<p>
+										Here's a summary of my educational background and budding
+										career.
+									</p>
+								</div>
+
+								<div className="row">
+									<div className="col-lg-6" data-aos="fade-up">
+										<h3 className="resume-title">Summary</h3>
+										<div className="resume-item pb-0">
+											<h4>Joel Wekesa</h4>
+											<p>
+												<em>
+													Dedicated, diligent, and efficient software developer
+													with 2+ years experience in UI/UX, API's and
+													databases. Seeking to further improve full stack
+													skills as your preferred developer.
+												</em>
+											</p>
+											<ul>
+												<li>+254 742 649976</li>
+												<li>joelwekesa.jw@gmail.com</li>
+											</ul>
+										</div>
+
+										<h3 className="resume-title">Education</h3>
+										<div className="resume-item">
+											<h4>
+												BSc Telecommunications &amp; Information Technology
+											</h4>
+											<h5>2013 - 2017</h5>
+											<p>
+												<em>Kenyatta University, Nairobi, Kenya</em>
+											</p>
+											<p>
+												<b>Relevant Coursework: </b>Operating Systems
+												Architecture, Usability in Website and Software Design,
+												C++ Programming, Relational Database Design & SQL, Data
+												Engineering.
+											</p>
+										</div>
+										<h3 className="resume-title">Technical Expertise</h3>
+										<div className="resume-item">
+											<h4>Databases</h4>
+											<p> MySQL | PostgreSQL</p>
+										</div>
+										<div className="resume-item">
+											<h4>Programming</h4>
+											<p>
+												{" "}
+												HTML5 | CSS3/SASS | JavaScript | ReactJS | Django |
+												Python | Bash/Shell | REST APIs
+											</p>
+										</div>
+									</div>
+									<div
+										className="col-lg-6"
+										data-aos="fade-up"
+										data-aos-delay="100">
+										<h3 className="resume-title">Professional Experience</h3>
+										<div className="resume-item">
+											<h4>Software Developer</h4>
+											<h5>2021 - Present</h5>
+											<p>
+												<em>mHealth Kenya, Nairobi, Kenya </em>
+											</p>
+											<ul>
+												<li>Design and implement new software solutions.</li>
+												<li>
+													Design and implement improvements to existing software
+													products.
+												</li>
+												<li>
+													Research technical issues and generate
+													creative/innovative solutions.
+												</li>
+											</ul>
+										</div>
+										<div className="resume-item">
+											<h4>Freelance Software Developer</h4>
+											<h5>2017 - Present</h5>
+											<ul>
+												<li>
+													Research, identification, and documentation of
+													clients' technical requirements.
+												</li>
+												<li>
+													Development and documentation of system architectures.
+												</li>
+												<li>Creation of data flows and database schemas.</li>
+												<li>
+													Implementation of project design, standards and
+													processes.
+												</li>
+												<li>
+													Continuous system support and training services.
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
 							</div>
-
-							<div className="row">
-								<div className="col-lg-6" data-aos="fade-up">
-									<h3 className="resume-title">Summary</h3>
-									<div className="resume-item pb-0">
-										<h4>Joel Wekesa</h4>
-										<p>
-											<em>
-												Dedicated, diligent, and efficient software developer
-												with 2+ years experience in UI/UX, API's and databases.
-												Seeking to further improve full stack skills as your
-												preferred developer.
-											</em>
-										</p>
-										<ul>
-											<li>+254 742 649976</li>
-											<li>joelwekesa.jw@gmail.com</li>
-										</ul>
-									</div>
-
-									<h3 className="resume-title">Education</h3>
-									<div className="resume-item">
-										<h4>BSc Telecommunications &amp; Information Technology</h4>
-										<h5>2013 - 2017</h5>
-										<p>
-											<em>Kenyatta University, Nairobi, Kenya</em>
-										</p>
-										<p>
-											<b>Relevant Coursework: </b>Operating Systems
-											Architecture, Usability in Website and Software Design,
-											C++ Programming, Relational Database Design & SQL, Data
-											Engineering.
-										</p>
-									</div>
-									<h3 className="resume-title">Technical Expertise</h3>
-									<div className="resume-item">
-										<h4>Databases</h4>
-										<p> MySQL | PostgreSQL</p>
-									</div>
-									<div className="resume-item">
-										<h4>Programming</h4>
-										<p>
-											{" "}
-											HTML5 | CSS3/SASS | JavaScript | ReactJS | Django | Python
-											| Bash/Shell | REST APIs
-										</p>
-									</div>
-								</div>
-								<div
-									className="col-lg-6"
-									data-aos="fade-up"
-									data-aos-delay="100">
-									<h3 className="resume-title">Professional Experience</h3>
-									<div className="resume-item">
-										<h4>Software Developer</h4>
-										<h5>2021 - Present</h5>
-										<p>
-											<em>mHealth Kenya, Nairobi, Kenya </em>
-										</p>
-										<ul>
-											<li>Design and implement new software solutions.</li>
-											<li>
-												Design and implement improvements to existing software
-												products.
-											</li>
-											<li>
-												Research technical issues and generate
-												creative/innovative solutions.
-											</li>
-										</ul>
-									</div>
-									<div className="resume-item">
-										<h4>Freelance Software Developer</h4>
-										<h5>2017 - Present</h5>
-										<ul>
-											<li>
-												Research, identification, and documentation of clients'
-												technical requirements.
-											</li>
-											<li>
-												Development and documentation of system architectures.
-											</li>
-											<li>Creation of data flows and database schemas.</li>
-											<li>
-												Implementation of project design, standards and
-												processes.
-											</li>
-											<li>Continuous system support and training services.</li>
-										</ul>
-									</div>
-								</div>
+							<div id="editor"></div>
+							<div>
+								<button className="btn btn-info" onClick={this.handleDownload}>
+									Download Resume
+								</button>
 							</div>
 						</div>
 					</section>
