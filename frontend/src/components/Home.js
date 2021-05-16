@@ -153,6 +153,7 @@ export class Home extends Component {
 			<>
 				{show && error && !loading ? (
 					<Modal
+						animation={false}
 						visible={show}
 						title="Oops"
 						onOk={this.handleOk}
@@ -172,6 +173,7 @@ export class Home extends Component {
 					</Modal>
 				) : show && !error && !loading ? (
 					<Modal
+						animation={false}
 						visible={show}
 						title="Received"
 						onOk={this.handleOk}
@@ -190,6 +192,7 @@ export class Home extends Component {
 					</Modal>
 				) : missing ? (
 					<Modal
+						animation={false}
 						visible={show}
 						title="Missing Fields"
 						footer={[
