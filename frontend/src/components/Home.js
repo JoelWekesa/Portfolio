@@ -703,6 +703,7 @@ export class Home extends Component {
 								data-aos-delay="100">
 								<iframe
 									className="responsive-iframe"
+									loading="lazy"
 									src="https://www.youtube.com/embed/RYbvg4fGSEo"></iframe>
 							</div>
 						</div>
@@ -999,6 +1000,7 @@ export class Home extends Component {
 
 										<iframe
 											src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15956.021117798682!2d36.91468875!3d-1.1567103999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1618942156298!5m2!1sen!2ske"
+											loading="lazy"
 											frameBorder="0"
 											style={{ border: 0, width: "100%", height: "290px" }}
 											allowFullScreen></iframe>
