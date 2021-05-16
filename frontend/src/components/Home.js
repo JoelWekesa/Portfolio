@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { Modal, Button } from "antd";
+import { HashLink } from "react-router-hash-link";
 import LinearProgress from "@material-ui/core/LinearProgress";
 
 export class Home extends Component {
@@ -219,6 +220,7 @@ export class Home extends Component {
 									src={images[0].image}
 									alt=""
 									className="img-fluid rounded-circle"
+									style={{ width: "120px", height: "120px" }}
 								/>
 							) : null}
 
@@ -251,35 +253,35 @@ export class Home extends Component {
 						<nav id="navbar" className="nav-menu navbar">
 							<ul>
 								<li>
-									<a href="#hero" className="nav-link scrollto active">
+									<HashLink to="/#hero" className="nav-link scrollto active">
 										<i className="bx bx-home"></i> <span>Home</span>
-									</a>
+									</HashLink>
 								</li>
 								<li>
-									<a href="#about" className="nav-link scrollto">
+									<HashLink to="/#about" className="nav-link scrollto">
 										<i className="bx bx-user"></i> <span>About</span>
-									</a>
+									</HashLink>
 								</li>
 								<li>
-									<a href="#resume" className="nav-link scrollto">
+									<HashLink to="/#resume" className="nav-link scrollto">
 										<i className="bx bx-file-blank"></i> <span>Resume</span>
-									</a>
+									</HashLink>
 								</li>
 								<li>
-									<a href="#portfolio" className="nav-link scrollto">
+									<HashLink to="/#portfolio" className="nav-link scrollto">
 										<i className="bx bx-book-content"></i>{" "}
 										<span>Portfolio</span>
-									</a>
+									</HashLink>
 								</li>
 								<li>
-									<a href="#services" className="nav-link scrollto">
+									<HashLink to="/#services" className="nav-link scrollto">
 										<i className="bx bx-server"></i> <span>Why Choose Me?</span>
-									</a>
+									</HashLink>
 								</li>
 								<li>
-									<a href="#contact" className="nav-link scrollto">
+									<HashLink to="/#contact" className="nav-link scrollto">
 										<i className="bx bx-envelope"></i> <span>Contact</span>
-									</a>
+									</HashLink>
 								</li>
 							</ul>
 						</nav>
@@ -319,6 +321,7 @@ export class Home extends Component {
 											src={images[0].image}
 											alt=""
 											className="img-fluid rounded-circle"
+											style={{ width: "300px", height: "300px" }}
 										/>
 									) : null}
 								</div>
@@ -481,6 +484,8 @@ export class Home extends Component {
 											<div
 												className="progress-bar"
 												role="progressbar"
+												aria-describedby="Django"
+												aria-label="Django"
 												aria-valuenow="100"
 												aria-valuemin="0"
 												aria-valuemax="100"></div>
@@ -495,6 +500,8 @@ export class Home extends Component {
 											<div
 												className="progress-bar"
 												role="progressbar"
+												aria-describedby="React"
+												aria-label="React"
 												aria-valuenow="98"
 												aria-valuemin="0"
 												aria-valuemax="100"></div>
@@ -509,6 +516,8 @@ export class Home extends Component {
 											<div
 												className="progress-bar"
 												role="progressbar"
+												aria-describedby="Databases"
+												aria-label="Databases"
 												aria-valuenow="95"
 												aria-valuemin="0"
 												aria-valuemax="100"></div>
@@ -528,6 +537,8 @@ export class Home extends Component {
 											<div
 												className="progress-bar"
 												role="progressbar"
+												aria-describedby="Python"
+												aria-label="Python"
 												aria-valuenow="98"
 												aria-valuemin="0"
 												aria-valuemax="100"></div>
@@ -542,6 +553,8 @@ export class Home extends Component {
 											<div
 												className="progress-bar"
 												role="progressbar"
+												aria-describedby="Cryptography"
+												aria-label="Cryptography"
 												aria-valuenow="75"
 												aria-valuemin="0"
 												aria-valuemax="100"></div>
@@ -554,8 +567,12 @@ export class Home extends Component {
 										</span>
 										<div className="progress-bar-wrap">
 											<div
+												id="WordPress"
 												className="progress-bar"
 												role="progressbar"
+												aria-labelledby="WordPress"
+												aria-label="WordPress"
+												aria-describedby="Wordpress"
 												aria-valuenow="90"
 												aria-valuemin="0"
 												aria-valuemax="100"></div>
@@ -690,8 +707,8 @@ export class Home extends Component {
 									I am the founder and creator of{" "}
 									<a href="https://www.cladi.shop/">cladi.shop</a> cladi.shop is
 									an online shopping platform that seeks to avail quality
-									fashion at affordable prices. You can click{" "}
-									<a href="https://www.cladi.shop/">here</a> to go to the
+									fashion at affordable prices. You can click on{" "}
+									<a href="https://www.cladi.shop/">Cladi.shop</a> to go to the
 									website or watch the video bellow that demonstrates shopping
 									on the website.
 								</p>
@@ -703,6 +720,7 @@ export class Home extends Component {
 								data-aos-delay="100">
 								<iframe
 									className="responsive-iframe"
+									title="YouTube link to Cladi"
 									loading="lazy"
 									src="https://www.youtube.com/embed/RYbvg4fGSEo"></iframe>
 							</div>
@@ -729,9 +747,9 @@ export class Home extends Component {
 									<div className="icon">
 										<i className="bi bi-bar-chart-steps"></i>
 									</div>
-									<h4 className="title">
-										<a href="">Database Design and Implementation</a>
-									</h4>
+									<h3 className="title">
+										<a href="/">Database Design and Implementation</a>
+									</h3>
 									<p className="description">
 										I use best database design practices and principles to
 										ensure information consistency, efficiently executing
@@ -744,9 +762,9 @@ export class Home extends Component {
 									<div className="icon">
 										<i className="bi bi-code-slash"></i>
 									</div>
-									<h4 className="title">
-										<a href="">Application Programming Interfaces (APIs)</a>
-									</h4>
+									<h3 className="title">
+										<a href="/">Application Programming Interfaces (APIs)</a>
+									</h3>
 									<p className="description">
 										Modern software systems are composed of many servers,
 										services, and other components that communicate through
@@ -762,9 +780,9 @@ export class Home extends Component {
 									<div className="icon">
 										<i className="bi bi-laptop"></i>
 									</div>
-									<h4 className="title">
-										<a href="">UI/UX design</a>
-									</h4>
+									<h3 className="title">
+										<a href="/">UI/UX design</a>
+									</h3>
 									<p className="description">
 										I create interactive, immersive, and easy to use UI/UX
 										designs that attract prospective and existing clients to
@@ -778,9 +796,9 @@ export class Home extends Component {
 									<div className="icon">
 										<i className="bi bi-binoculars"></i>
 									</div>
-									<h4 className="title">
-										<a href="">Search Engine Optimization (SEO)</a>
-									</h4>
+									<h3 className="title">
+										<a href="/">Search Engine Optimization (SEO)</a>
+									</h3>
 									<p className="description">
 										SEO is rapidly becoming an indispensable part of digital
 										marketing. This realization motivates me to create websites
@@ -796,9 +814,9 @@ export class Home extends Component {
 									<div className="icon">
 										<i className="bi bi-gear-wide-connected"></i>
 									</div>
-									<h4 className="title">
-										<a href="">Technical Support</a>
-									</h4>
+									<h3 className="title">
+										<a href="/">Technical Support</a>
+									</h3>
 									<p className="description">
 										With most of the systems I create being reliable and easy to
 										use, technical support is essentially for client training
@@ -813,9 +831,9 @@ export class Home extends Component {
 									<div className="icon">
 										<i className="bi bi-cash"></i>
 									</div>
-									<h4 className="title">
-										<a href="">Cost Efficiency</a>
-									</h4>
+									<h3 className="title">
+										<a href="/">Cost Efficiency</a>
+									</h3>
 									<p className="description">
 										Clients are the backbone of my freelance business. I
 										understand that different clients have different
@@ -976,13 +994,13 @@ export class Home extends Component {
 									<div className="info">
 										<div className="address">
 											<i className="bi bi-geo-alt"></i>
-											<h4>Location:</h4>
+											<h3> Location:</h3>
 											<p className="lead">Nairobi, Kenya</p>
 										</div>
 
 										<div className="email">
 											<i className="bi bi-envelope"></i>
-											<h4>Email:</h4>
+											<h3> Email:</h3>
 											<p className="lead">
 												<a href="mailto:joelwekesa.jw@gmail.com">
 													joelwekesa.jw@gmail.com
@@ -992,7 +1010,7 @@ export class Home extends Component {
 
 										<div className="phone">
 											<i className="bi bi-phone"></i>
-											<h4>Call:</h4>
+											<h3> Call:</h3>
 											<p className="lead">
 												<a href="tel:+254742649976"> +254 742 649976</a>
 											</p>
@@ -1001,6 +1019,7 @@ export class Home extends Component {
 										<iframe
 											src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15956.021117798682!2d36.91468875!3d-1.1567103999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2ske!4v1618942156298!5m2!1sen!2ske"
 											loading="lazy"
+											title="This is my office location"
 											frameBorder="0"
 											style={{ border: 0, width: "100%", height: "290px" }}
 											allowFullScreen></iframe>
@@ -1027,7 +1046,7 @@ export class Home extends Component {
 												/>
 											</div>
 											<div className="form-group col-md-6">
-												<label htmlFor="name">Your Email</label>
+												<label htmlFor="email">Your Email</label>
 												<input
 													type="email"
 													className="form-control"
@@ -1040,7 +1059,7 @@ export class Home extends Component {
 											</div>
 										</div>
 										<div className="form-group">
-											<label htmlFor="name">Subject</label>
+											<label htmlFor="subject">Subject</label>
 											<input
 												type="text"
 												className="form-control"
@@ -1052,14 +1071,17 @@ export class Home extends Component {
 											/>
 										</div>
 										<div className="form-group">
-											<label htmlFor="name">Message</label>
-											<textarea
-												className="form-control"
-												name="message"
-												value={message}
-												rows="10"
-												onChange={this.handleChange}
-												required></textarea>
+											<label htmlFor="message">
+												Message
+												<textarea
+													className="form-control"
+													name="message"
+													value={message}
+													rows="10"
+													cols="100"
+													onChange={this.handleChange}
+													required></textarea>
+											</label>
 										</div>
 										<div className="my-3">
 											<div className="loading">Loading</div>
