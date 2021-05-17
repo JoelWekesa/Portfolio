@@ -1,4 +1,5 @@
 module.exports = {
+	mode: "production",
 	module: {
 		rules: [
 			{
@@ -14,10 +15,15 @@ module.exports = {
 				},
 			},
 			{
-				test: /\.(png|jpe?g|gif|woff|woff2)$/i,
+				test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+				// test: /\.(png|jpe?g|gif|woff|woff2|eot)$/i,
 				use: [
 					{
 						loader: "file-loader",
+						options: {
+							name: "[name].[ext]",
+							outputPath: "fonts/",
+						},
 					},
 				],
 			},

@@ -16,8 +16,16 @@ export class Home extends Component {
 		message: "",
 		loading: false,
 		missing: false,
+		siteLoading: true,
 	};
 	componentDidMount = () => {
+		setTimeout(() => {
+			this.setState({
+				...this.state,
+				siteLoading: false,
+			});
+		}, 2000);
+
 		const url = "https://joelwekesa.herokuapp.com/api/images/";
 		axios
 			.get(url)
@@ -149,7 +157,9 @@ export class Home extends Component {
 			message,
 			loading,
 			missing,
+			siteLoading,
 		} = this.state;
+
 		return (
 			<>
 				{show && error && !loading ? (
