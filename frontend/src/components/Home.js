@@ -527,6 +527,22 @@ export class Home extends Component {
 
 									<div className="progress">
 										<span className="skill">
+											JavaScript <i className="val">96%</i>
+										</span>
+										<div className="progress-bar-wrap">
+											<div
+												className="progress-bar"
+												role="progressbar"
+												aria-describedby="JavaScript"
+												aria-label="Cryptography"
+												aria-valuenow="96"
+												aria-valuemin="0"
+												aria-valuemax="100"></div>
+										</div>
+									</div>
+
+									<div className="progress">
+										<span className="skill">
 											Relational Databases <i className="val">95%</i>
 										</span>
 										<div className="progress-bar-wrap">
@@ -591,6 +607,23 @@ export class Home extends Component {
 												aria-label="WordPress"
 												aria-describedby="Wordpress"
 												aria-valuenow="90"
+												aria-valuemin="0"
+												aria-valuemax="100"></div>
+										</div>
+									</div>
+									<div className="progress">
+										<span className="skill">
+											HTML/CSS <i className="val">97%</i>
+										</span>
+										<div className="progress-bar-wrap">
+											<div
+												id="HTML/CSS"
+												className="progress-bar"
+												role="progressbar"
+												aria-labelledby="WordPress"
+												aria-label="HTML/CSS"
+												aria-describedby="HTML/CSS"
+												aria-valuenow="97"
 												aria-valuemin="0"
 												aria-valuemax="100"></div>
 										</div>
