@@ -15,7 +15,7 @@ module.exports = {
 				},
 			},
 			{
-				test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+				test: /\.(woff(2)?|ttf|eot|svg|png)(\?v=\d+\.\d+\.\d+)?$/,
 				// test: /\.(png|jpe?g|gif|woff|woff2|eot)$/i,
 				use: [
 					{

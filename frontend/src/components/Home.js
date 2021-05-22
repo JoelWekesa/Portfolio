@@ -273,6 +273,12 @@ export class Home extends Component {
 									</HashLink>
 								</li>
 								<li>
+									<HashLink to="/#skills" className="nav-link scrollto">
+										<i className="bx bxl-python"></i>
+										<span>Skills</span>
+									</HashLink>
+								</li>
+								<li>
 									<HashLink to="/#resume" className="nav-link scrollto">
 										<i className="bx bx-file-blank"></i> <span>Resume</span>
 									</HashLink>
@@ -285,7 +291,8 @@ export class Home extends Component {
 								</li>
 								<li>
 									<HashLink to="/#services" className="nav-link scrollto">
-										<i className="bx bx-server"></i> <span>Why Choose Me?</span>
+										<i className="bx bx-question-mark"></i>{" "}
+										<span>Why Choose Me?</span>
 									</HashLink>
 								</li>
 								<li>
