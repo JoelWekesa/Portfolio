@@ -292,7 +292,7 @@ export class Home extends Component {
 								<li>
 									<HashLink to="/#services" className="nav-link scrollto">
 										<i className="bx bx-question-mark"></i>{" "}
-										<span>Why Choose Me?</span>
+										<span>Why Choose Me</span>
 									</HashLink>
 								</li>
 								<li>
