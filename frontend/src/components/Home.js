@@ -241,7 +241,7 @@ export class Home extends Component {
 								<a href="tel:+254742649976" className="linkedin">
 									<i className="bi bi-phone"></i>
 								</a>
-								<a href="https://twitter.com/its_joel1" className="twitter">
+								<a href="https://twitter.com/joelmunialo" className="twitter">
 									<i className="bx bxl-twitter"></i>
 								</a>
 								<a
